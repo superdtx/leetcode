@@ -3,7 +3,6 @@
  * @return {number}
  */
 var maximalRectangle = function(matrix) {
-    console.log('come here');
     if(matrix.length === 0 || matrix[0].length === 0) {
         return 0;
     }
@@ -43,13 +42,14 @@ var largestRectangleArea = function(heights) {
   var stack = [];
   var max = 0;
   var leftarea = 0, rightarea = 0;
+  heights.push(0);
   
   for(var i=0; i < heights.length; i++) {
       while(stack.length !== 0 && heights[stack[stack.length-1]] > heights[i]) {
           var tmp = stack[stack.length-1];
           stack.pop();
           leftarea = (stack.length === 0? tmp + 1: tmp - heights[stack[stack.length-1]])*heights[tmp];
-          rightarea = (i - tmp - 1)* height[tmp];
+          rightarea = (i - tmp - 1)* heights[tmp];
           max = Math.max(max, (leftarea+rightarea));
       }
       stack.push(i);
