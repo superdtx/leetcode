@@ -4,7 +4,6 @@
  */
 var maximalRectangle = function(matrix) {
     console.log('come here');
-
     if(matrix.length === 0 || matrix[0].length === 0) {
         return 0;
     }
@@ -14,11 +13,15 @@ var maximalRectangle = function(matrix) {
     var height = [];
     
     for(var i = 0; i < m; i++) {
+        height.push([]);
+    }
+    
+    for(var i = 0; i < m; i++) {
         for(var j = 0; j < n; j++) {
             if(matrix[i][j] === '0') {
                 height[i][j] = 0;
             } else {
-                height[i][j] = (i === 0? 1:height[i-1][j] + 1);
+                height[i][j] = (i?height[i-1][j] + 1:1);
             }
         }
     }
