@@ -21,7 +21,6 @@ var threeSumClosest = function(nums, target) {
             var diff = target - nums[i] - nums[head] - nums[tail];
             
             if(diff===0){
-                console.log('come here');
                 return target;
             } else if (diff > 0){
                 head++;
