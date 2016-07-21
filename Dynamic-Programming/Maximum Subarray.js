@@ -5,7 +5,7 @@
 var maxSubArray = function(nums) {
     
     var sum = 0;
-    var m = Number.MIN_VALUE;
+    var m = Number.NEGATIVE_INFINITY;
     
     for(var i = 0; i < nums.length; i++){
         sum += nums[i];
