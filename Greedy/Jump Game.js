@@ -13,9 +13,7 @@ var canJump = function(nums) {
             return false;
         }
         
-        if(cover < nums[i]){
-            cover = nums[i];
-        }
+        cover = Math.max(cover, nums[i]);
     }
     
     return true;
