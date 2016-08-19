@@ -1,5 +1,9 @@
 # leetcode-note
 
-##[JavaScript: Basics and Tricky Questions](http://www.thatjsdude.com/interview/js2.html)
-##[JavaScript: Basics and Tricky Questions](http://www.thatjsdude.com/interview/js2.html)
-##[JavaScript: Basics and Tricky Questions](http://www.thatjsdude.com/interview/js2.html)
+##[Array](https://github.com/superdtx/leetcode-note/tree/master/Array)
+
+
+##[Backtracking](https://github.com/superdtx/leetcode-note/tree/master/Backtracking)
+
+
+##[Bit-Manipulating](https://github.com/superdtx/leetcode-note/tree/master/Bit-Manipulation)
