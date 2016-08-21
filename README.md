@@ -1,16 +1,6 @@
 ## leetcode-note
 
 ###[Array](https://github.com/superdtx/leetcode-note/tree/master/Array)
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
-####[]()
 
 ###[Bit Manipulating](https://github.com/superdtx/leetcode-note/tree/master/Bit-Manipulation)
 
