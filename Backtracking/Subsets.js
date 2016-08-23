@@ -7,10 +7,6 @@ var subsets = function(nums) {
     var result = [];
     var len = nums.length;
     
-    nums.sort(function(a, b){
-        return a - b;
-    });
-    
     helper(nums, 0, len-1, [], result);
     
     return result;
