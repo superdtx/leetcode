@@ -28,6 +28,34 @@ var maxArea = function(height) {
             j = k;
         }
     }
+    return res;
+};
+
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+ 
+ /*
+    a10 - a21 if a10 < a21, a10 is used to calculate area. To increase the chance to get more water, we have to enhance weakness
+*/
+ 
+var maxArea = function(height) {
+    var len = height.length;
+    var i = 0;
+    var j = len-1;
+    var k;
+    var res = 0;
+    
+    while(i < j){
+        res = Math.max(res, (j - i)*Math.min(height[i], height[j]));
+        if (height[i] < height[j]){
+            i += 1;
+        } else {
+            j -= 1;
+        }
+    }
     
     return res;
 };
