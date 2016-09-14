@@ -16,3 +16,13 @@ var singleNumber = function(nums) {
     
     return hashmap[Object.keys(hashmap)[0]];
 };
+
+
+// Could you implement it without using extra memory?
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function(nums) {
+    return nums.reduce((a, b) => a^b);
+};
