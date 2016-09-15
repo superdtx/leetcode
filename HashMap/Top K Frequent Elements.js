@@ -20,7 +20,13 @@ var topKFrequent = function(nums, k) {
     });
     
     priorityArray.sort(function(a, b){
-        return a.priority <= b.priority;
+        if (a.priority > b.priority) {
+            return -1;
+        }else if (a.priority < b.priority) {
+            return 1;
+        }
+        // a must be equal to b
+        return 0;
     });
     
     console.log(priorityArray);
