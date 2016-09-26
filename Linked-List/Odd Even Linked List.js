@@ -9,6 +9,10 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+/**
+ * O(1) space and O(n) time
+ */
+
 var oddEvenList = function(head) {
     
     var tail = head;
