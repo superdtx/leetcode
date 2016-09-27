@@ -1,4 +1,4 @@
-/**
+/** 175ms
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -34,7 +34,7 @@ var removeNthFromEnd = function(head, n) {
     return dummy.next;
 };
 
-/*两个Pointer*/
+/*两个Pointer 145ms*/
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
