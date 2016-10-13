@@ -10,7 +10,7 @@ What if you could modify the BST node's structure?
 The optimal runtime complexity is O(height of BST).
 */
 
-//Iteration DSF
+//Iteration DFS
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -52,3 +52,40 @@ var kthSmallest = function(root, k) {
     
     return null;
 };
+
+//Recursive DFS
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} k
+ * @return {number}
+ */
+var kthSmallest = function(root, k) {
+    
+    if(root === null){
+        return;
+    }
+    
+    var count = [k];
+    var res = [];
+    
+    helper(root, count, res);
+    return res[0];
+};
+
+function helper(node, count, res){
+    
+    node.left && helper(node.left, count, res);
+    count[0]--;
+    if(count[0] === 0){
+        res[0] = node.val;
+        return;
+    }
+    node.right && helper(node.right, count, res);
+}
