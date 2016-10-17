@@ -59,3 +59,36 @@ var connect = function(root) {
     connect(root.left);
     connect(root.right);
 };
+
+//bfs level-order traversal
+/**
+ * Definition for binary tree with next pointer.
+ * function TreeLinkNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = this.next = null;
+ * }
+ */
+
+/**
+ * @param {TreeLinkNode} root
+ * @return {void} Do not return anything, modify tree in-place instead.
+ */
+var connect = function(root) {
+    
+    if(!root){
+        return;
+    }
+    
+    var queue = [{node: root, step: 0}];
+    
+    while(queue.length){
+        var item = queue.shift();
+        var node = item.node;
+        var step = item.step;
+        
+        node.left && queue.push({node: node.left, step: step+1});
+        node.right && queue.push({node: node.right, step: step+1});
+        
+        queue.length && (step === queue[0].step) && (node.next = queue[0].node);
+    }
+};
