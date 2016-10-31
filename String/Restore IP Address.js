@@ -11,7 +11,7 @@ return ["255.255.11.135", "255.255.111.35"]. (Order does not matter)
 var restoreIpAddresses = function(s) {
     
     var result = [];
-    var address = Array(4).fill('');
+    var address = [];
     backTracking(s, 0, 0, result, address);
     
     return result;
@@ -34,8 +34,9 @@ function backTracking(s, start, count, result, address){
         
         var toAdd = s.slice(start, i+1);
         if(parseInt(toAdd) <= 255){
-            address[count] = toAdd;
+            address.push(parseInt(toAdd));
             backTracking(s, i+1, count+1, result, address.concat());
+            address.pop();
         }
     }
 }
