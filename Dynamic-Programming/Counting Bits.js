@@ -26,3 +26,26 @@ var countBits = function(num) {
     }
     return res;
 };
+
+/**
+倒过来想，一个数 * 2 就是把它的二进制全部左移一位，也就是说 1的个数是相等的。
+那么我们可以利用这个结论来做。
+res[i /2] 然后看看最低位是否为1即可（上面*2一定是偶数，这边比如15和14除以2都是7，但是15时通过7左移一位并且+1得到，14则是直接左移）
+所以res[i] = res[i >>1] + (i&1)
+*/
+/**
+ * @param {number} num
+ * @return {number[]}
+ */
+var countBits = function(num) {
+    
+var res = [];
+        
+    res[0] = 0;
+    
+    for (var i = 1; i <= num; i++) {
+        res[i] = res[i>>1] + (i & 1);
+    }
+    
+    return res;
+};
