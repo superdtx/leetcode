@@ -50,3 +50,29 @@ var fizzBuzz = function(n) {
     
     return fizzBuzzArray;
 };
+
+//Don't use %
+var fizzBuzz = function(n) {
+    
+    var fizzBuzzArray = [];
+    
+    for(let i = 0, fizz = 0, buzz = 0; i < n; i++){
+        fizz++;
+        buzz++;
+        if(fizz === 3 && buzz === 5){
+            fizzBuzzArray.push('FizzBuzz');
+            fizz = 0;
+            buzz = 0;
+        } else if(fizz === 3){
+            fizzBuzzArray.push('Fizz');
+            fizz = 0;
+        } else if(buzz === 5){
+            fizzBuzzArray.push('Buzz');
+            buzz = 0;
+        } else {
+            fizzBuzzArray.push((i+1).toString());
+        }
+    }
+    
+    return fizzBuzzArray;
+};
