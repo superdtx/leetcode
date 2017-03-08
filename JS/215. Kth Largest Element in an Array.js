@@ -8,7 +8,7 @@ Note:
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 */
 
-
+//https://discuss.leetcode.com/topic/14597/solution-explained
 //O(N lg N) running time + O(1) memory
 /**
  * @param {number[]} nums
