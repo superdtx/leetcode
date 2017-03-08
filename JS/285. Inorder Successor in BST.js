@@ -26,3 +26,31 @@ var inorderSuccessor = function(root, p) {
     }
     
 };
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @return {TreeNode}
+ */
+var inorderSuccessor = function(root, p) {
+    var res = null;
+    
+    while(root !== null){
+        if(root.val > p.val){
+            res = root;
+            root = root.left;
+        } else {
+            root = root.right;
+        }
+    }
+    
+    return res;
+};
