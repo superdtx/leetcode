@@ -36,13 +36,13 @@ function helper(s, start, end, k){
         return 0;
     }
     
-    let count = new Array(26).fill(0);
+    var count = new Array(26).fill(0);
     
-    for(let i = start; i < end; i++){
+    for(var i = start; i < end; i++){
         count[s.charCodeAt(i)-97]++; 
     }
     
-    for(let i = 0; i < 26; i++){
+    for(var i = 0; i < 26; i++){
         /**
          * If this character occurs at least once, but fewer than k times
          * in this substring, we know:
@@ -58,10 +58,10 @@ function helper(s, start, end, k){
              * Look for each occurrence of this character (i + 'a')
              * in this substring.
              */
-            for(let j = start; j < end; j++){
+            for(var j = start; j < end; j++){
                 if(s.charCodeAt(j) === (i+97)) {
-                    let left = helper(s, start, j, k);
-                    let right = helper(s, j+1, end, k);
+                    var left = helper(s, start, j, k);
+                    var right = helper(s, j+1, end, k);
                     return Math.max(left, right);
                 }
             }
