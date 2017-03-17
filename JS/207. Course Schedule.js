@@ -1,4 +1,6 @@
 /*
+https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf
+
 There are a total of n courses you have to take, labeled from 0 to n - 1.
 
 Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
