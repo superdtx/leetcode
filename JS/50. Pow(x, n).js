@@ -44,3 +44,22 @@ function bs(y, n){
         return ret*ret;
     }
 }
+
+
+/**
+ * @param {number} x
+ * @param {number} n
+ * @return {number}
+ */
+var myPow = function(x, n) {
+    var ret = 1;
+    var negative = n < 0 ? (n *= -1, true) : false;
+    
+    while(n){
+        (n & 1) && (ret *= x);
+        x *= x;
+        n >>>= 1; //unsigned integer
+    }
+    
+    return negative ? 1/ret : ret;
+};
