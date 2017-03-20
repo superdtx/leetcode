@@ -29,8 +29,7 @@ var evalRPN = function(tokens) {
         } else if(tokens[i] === '/'){
             var divisor = stack.pop();
             var dividend = stack.pop();
-            var quotient = dividend/divisor > 0 ? Math.floor(dividend/divisor) : Math.ceil(dividend/divisor);
-            stack.push(Math.floor(quotient));
+            stack.push(Math.trunc(dividend/divisor));
         } else {
             stack.push(parseInt(tokens[i]));
         }
