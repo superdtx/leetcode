@@ -19,3 +19,25 @@ class Solution(object):
             ret += ord(t[i]) - ord(s[i])
             
         return chr(ret + ord(t[len(t)-1]))
+
+    
+'''
+Using XOR:
+
+class Solution(object):
+    def findTheDifference(self, s, t):
+        return chr(reduce(operator.xor, map(ord, s + t)))
+
+Using collections.Counter():
+
+class Solution(object):
+    def findTheDifference(self, s, t):
+        return list((collections.Counter(t) - collections.Counter(s)))[0]
+
+A 2-liner here using sorted():
+
+class Solution(object):
+    def findTheDifference(self, s, t):
+        s, t = sorted(s), sorted(t)
+        return t[-1] if s == t[:-1] else [x[1] for x in zip(s, t) if x[0] != x[1]][0]
+'''
