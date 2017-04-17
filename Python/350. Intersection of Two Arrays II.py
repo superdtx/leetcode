@@ -25,8 +25,7 @@ class Solution(object):
         ret = []
         c = c1 & c2
         for id in set : 
-            for i in xrange(0, c[id]):
-                ret.append(id)
+            ret += [id]*set[id]
                 
         return ret
         
