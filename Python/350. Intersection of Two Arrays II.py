@@ -20,12 +20,12 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        set1 = collections.Counter(nums1)
-        set2 = collections.Counter(nums2)
+        c1 = collections.Counter(nums1)
+        c2 = collections.Counter(nums2)
         ret = []
-        set = set1 & set2
+        c = c1 & c2
         for id in set : 
-            for i in xrange(0, set[id]):
+            for i in xrange(0, c[id]):
                 ret.append(id)
                 
         return ret
