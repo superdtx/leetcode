@@ -48,3 +48,28 @@ var finder = function(num, nums){
     
     return -1;
 };
+
+//Log(N)
+/**
+ * @param {number[]} findNums
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var nextGreaterElement = function(findNums, nums) {
+    
+    var stack = [];
+    var map = {};
+    
+    for(var num of nums){
+        while(stack.length !== 0 && stack[stack.length - 1] < num){
+            map[stack.pop()] = num;
+        }
+        stack.push(num);
+    }
+    
+    for(var i = 0; i < findNums.length; i++){
+        findNums[i] = map[findNums[i]] || -1;
+    }
+    
+    return findNums;
+};
