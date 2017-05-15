@@ -33,3 +33,22 @@ var canPermutePalindrome = function(s) {
     
     return false;
 };
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var canPermutePalindrome = function(s) {
+    var set = [];
+
+    for(var i = 0; i < s.length; i++){
+        if(set.indexOf(s[i]) < 0){
+            set.push(s[i]);
+        } else {
+            set.splice(set.indexOf(s[i]), 1);
+        }
+    }
+    
+    return set.length < 2;
+};
