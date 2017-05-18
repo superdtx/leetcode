@@ -29,3 +29,19 @@ var generatePossibleNextMoves = function(s) {
     
     return ret;
 };
+
+
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var generatePossibleNextMoves = function(s) {
+    
+    var ret = [];
+    
+    for(var i = s.indexOf('++');  i != -1; i = s.indexOf("++", i+1)){
+        ret.push(s.slice(0, i)+'--'+s.slice(i+2));
+    }
+    
+    return ret;
+};
