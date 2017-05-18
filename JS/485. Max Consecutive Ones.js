@@ -38,3 +38,16 @@ var findMaxConsecutiveOnes = function(nums) {
     
     return max;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMaxConsecutiveOnes = function(nums) {
+    var onesArray = nums.join('').split('0');
+    var max = 0;
+    for(var i = 0; i < onesArray.length; i++){
+        max = Math.max(max, onesArray[i].length);
+    }
+    return max;
+};
