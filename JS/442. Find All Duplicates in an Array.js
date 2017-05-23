@@ -13,6 +13,9 @@ Output:
 [2,3]
 **/
 
+// when find a number i, flip the number at position i-1 to negative. 
+// if the number at position i-1 is already negative, i is the number that occurs twice.
+
 /**
  * @param {number[]} nums
  * @return {number[]}
