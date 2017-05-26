@@ -29,9 +29,9 @@ var convertToBase7 = function(num) {
     var ret = [];
     
     while(num > 0){
-        ret.push(num%7 +'');
+        ret.unshift(num%7 +'');
         num = Math.floor(num / 7);
     }
     
-    return isMinus? '-' + ret.reverse().join('') : ret.reverse().join('');
+    return isMinus? '-' + ret.join('') : ret.join('');
 };
