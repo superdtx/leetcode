@@ -1,4 +1,4 @@
-"""
+'''
 We are playing the Guess Game. The game is as follows:
 
 I pick a number from 1 to n. You have to guess which number I picked.
@@ -14,7 +14,7 @@ Example:
 n = 10, I pick 6.
 
 Return 6.
-"""
+'''
 
 # The guess API is already defined for you.
 # @param num, your guess
